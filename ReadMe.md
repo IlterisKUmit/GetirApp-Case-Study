@@ -7,12 +7,14 @@ requested format.
 
 To download then install and run this application in the local machine, follow these steps : 
 
-- git init 
-- git pull https://github.com/IlterisKUmit/GetirApp-Case-Study.git
-- npm init
-- npm install
-- node app.js
-- open http://localhost:3000 in your browser
+Run the commands step by step in command line:
+- $ git init 
+- $ git pull https://github.com/IlterisKUmit/GetirApp-Case-Study.git
+- $ npm init
+- $ npm install
+- $ node app.js
+
+Then open the http://localhost:3000 link in your browser
 
 Used Technologies:  
 -Node.js    
