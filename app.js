@@ -30,7 +30,7 @@ app.use(function(err, req, res, next) {
 });
 
 //App starts running and connecting to DB
-app.listen(8000,() =>{
+app.listen(3000,() =>{
   MongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client) => {
     if(error) {
       throw error;
