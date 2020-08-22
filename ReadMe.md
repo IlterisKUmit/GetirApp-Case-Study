@@ -18,7 +18,7 @@ To download then install and run this application in the local machine, follow t
     <li>$ npm install</li>
     <li>$ node app.js</li>
 </ul>
-<p>Then open the <a href="http://localhost:3000">localhost:<b>3000</b></a> link in your browser</p>
+<p>Then open the <a href="http://localhost:3000" target="_blank">localhost:<b>3000</b></a> link in your browser</p>
 
 <hr>  
 
