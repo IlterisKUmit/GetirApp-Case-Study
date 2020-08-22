@@ -8,6 +8,7 @@ const CONNECTION_URL = 'mongodb+srv://challengeUser:WUMglwNBaydH8Yvu@challenge-x
                        'study?retryWrites=true';
 const DATABASE_NAME = "getir-case-study";
 const COLLECTION_NAME = "records";
+const port = process.env.PORT || 3000;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -30,7 +31,7 @@ app.use(function(err, req, res, next) {
 });
 
 //App starts running and connecting to DB
-app.listen(3000,() =>{
+app.listen(port,() =>{
   MongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client) => {
     if(error) {
       throw error;
