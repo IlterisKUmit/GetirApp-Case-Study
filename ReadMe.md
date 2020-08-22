@@ -19,6 +19,8 @@ To download then install and run this application in the local machine, follow t
     <li>$ node app.js</li>
 </ul>
 <p>Then open the <a href="http://localhost:3000">localhost:<b>3000</b></a> link in your browser</p>
+<p>This app deployed as a demo to the Heroku,<br>
+To run the demo online follow this link: <a href="https://ilteris-heroku-getir.herokuapp.com"><b>Getir App on Heroku</b></a>.</p>
 
 <hr>  
 
