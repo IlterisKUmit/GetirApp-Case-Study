@@ -63,6 +63,3 @@ And getting a response payload like this:
     ]   
 }
 </pre> 
-
-
-
