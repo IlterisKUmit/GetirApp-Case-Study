@@ -19,7 +19,7 @@
     "curl": "^0.1.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
-    "express": "~4.16.1",
+    "express": "^4.16.4",
     "http-errors": "~1.6.3",
     "mongodb": "^3.6.0"
   },
@@ -32,5 +32,18 @@
     "jest": "^26.4.2",
     "superagent": "^6.0.0",
     "supertest": "^4.0.2"
-  }
+  },
+  "description": "Getir-Case-Study",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IlterisKUmit/GetirApp-Case-Study.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IlterisKUmit/GetirApp-Case-Study/issues"
+  },
+  "homepage": "https://github.com/IlterisKUmit/GetirApp-Case-Study#readme"
 }
