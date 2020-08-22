@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Getir App</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="icon"
-          type="image/png"
-          href="https://getir.com/images/bimutluluk.png">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <head>
+        <title>Getir App</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="icon"
+              type="image/png"
+              href="https://getir.com/images/bimutluluk.png">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
 
-<h1 style="text-align: center; color: darkmagenta" >Getir App</h1>
+        <h1 style="text-align: center; color: darkmagenta" >Getir App</h1>
 
-<div>
-    <form action="/getir" method="POST" class="ws-validate">
-        <div class="form-row">
-            Start Date:
-            <input data-dependent-validation='{"from": "date-to", "prop": "max"}' type="date" name="startDate" id="date-from" placeholder="from" />
-            End Date:
-            <input data-dependent-validation='{"from": "date-from", "prop": "min"}' type="date" name="endDate" id="date-to" placeholder="to" />
+        <div class="container">
+            <form action="/getir" method="POST" class="ws-validate">
+                <div class="form-row">
+                    Start Date:
+                    <input data-dependent-validation='{"from": "date-to", "prop": "max"}' type="date" name="startDate" id="date-from" placeholder="from" />
+                    End Date:
+                    <input data-dependent-validation='{"from": "date-from", "prop": "min"}' type="date" name="endDate" id="date-to" placeholder="to" />
+                </div>
+
+                <div class="form-row">
+                    Min Count:
+                    <input type="number" name="minCount" placeholder="Min Count">
+                    Max Count:
+                    <input type="number" name="maxCount" placeholder="Max Count">
+                </div>
+
+                <div class="form-row">
+                    <input type="submit" value="Fetch the data"/>
+                </div>
+            </form>
         </div>
-
-        <div class="form-row">
-            Min Count:
-            <input type="number" name="minCount" placeholder="Min Count">
-            Max Count:
-            <input type="number" name="maxCount" placeholder="Max Count">
+        <hr>
+        <div style="text-align: left" class="container">
+            <h3 style="text-align: left"> Results: </h3>
+            <div style="text-align: left" class="container">
+                <pre><p><%-result%></p></pre>
+            </div>
         </div>
-
-        <div class="form-row">
-            <input type="submit" value="Fetch the data"/>
-        </div>
-    </form>
-</div>
-<br>
-<hr>
-<br>
-<div style="text-align: left">
-    <h3 style="text-align: left"> Results: </h3>
-    <div style="text-align: left">
-        <pre><p><%-result%></p></pre>
-    </div>
-</div>
-
-</body>
+    </body>
 </html>
