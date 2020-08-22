@@ -47,7 +47,7 @@ app.get('/getir', function (req, res, next){
 });
 
 app.post('/getir', function (req,res,next){
-  //This query collect the items that meets the conditions that given with the req.body parameters
+  //This query collect the items that meets the conditions that given with the req.body parameters.
   collection.find({createdAt: { $gt: new Date(req.body.startDate), $lt: new Date(req.body.endDate) }})
             .project({key: 1, createdAt :1, counts:1})
             .toArray(function(err, result) {
