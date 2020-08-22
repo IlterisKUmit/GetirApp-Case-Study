@@ -29,6 +29,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+//App starts running and connecting to DB
 app.listen(8000,() =>{
   MongoClient.connect(CONNECTION_URL, { useNewUrlParser: true }, (error, client) => {
     if(error) {
@@ -45,7 +46,7 @@ app.get('/getir', function (req, res, next){
 });
 
 app.post('/getir', function (req,res,next){
-  console.log(req.body);
+  //This query collect the items that meets the conditions that given with the req.body parameters
   collection.find({createdAt: { $gt: new Date(req.body.startDate), $lt: new Date(req.body.endDate) }})
             .project({key: 1, createdAt :1, counts:1})
             .toArray(function(err, result) {
@@ -56,6 +57,7 @@ app.post('/getir', function (req,res,next){
     var oprStatusMessage;
     var recordsArr = [];
 
+    //In this if-else tree we are checking for certain error/response situations
     if(req.body.startDate === '' ||
        req.body.endDate === ''   ||
        req.body.minCount === ''  ||
@@ -106,6 +108,7 @@ app.post('/getir', function (req,res,next){
       oprStatusMessage = "UNKNOWN ERROR CONTACT ADMIN";
     }
 
+    //In this loop we are creating expected response
     for(let val of result){
       let tempArr = val.counts;
       let total = 0;
@@ -136,6 +139,7 @@ app.post('/getir', function (req,res,next){
   });
 });
 
+//This block handles 404 status
 app.use(function(req, res, next){
   res.status(404);
 
