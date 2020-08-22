@@ -23,5 +23,10 @@
     "jest": "^26.4.2",
     "superagent": "^6.0.0",
     "supertest": "^4.0.2"
-  }
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "author": "ilteris-kutlug-umit",
+  "license": "MIT"
 }
