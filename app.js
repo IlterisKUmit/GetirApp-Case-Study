@@ -68,7 +68,7 @@ app.post('/getir', function (req,res,next){
     }else if(req.body.startDate > req.body.endDate) {
       oprStatusCode = 12;
       oprStatusMessage = "START DATE CAN NOT BE GREATER THAN END DATE";
-    }else if(req.body.minCount >= req.body.maxCount){
+    }else if(parseInt(req.body.minCount) >= parseInt(req.body.maxCount)){
       oprStatusCode = 13;
       oprStatusMessage = "MIN COUNT CAN NOT BE GREATER OR EQUAL TO MAX COUNT";
     }else if(res.statusCode === 200){
